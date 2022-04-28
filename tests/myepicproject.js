@@ -68,7 +68,7 @@ const main = async() => {
   console.log('👀 GIF List', account.gifList);
 
 
-  await program.rpc.removeGif("0", {
+  await program.rpc.removeGif(0, {
     accounts: {
       baseAccount: baseAccount.publicKey,
       user: provider.wallet.publicKey,
