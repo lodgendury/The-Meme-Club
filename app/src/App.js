@@ -237,12 +237,12 @@ const memeClick = await setGifList(oldGif => oldGif.map(item => { return item.id
 };
 
   const deleteGif = async(num) => {
-    const numIndex = await num.toString();
+    
     try {
     const provider = getProvider();
     const program = new Program(idl, programID, provider);
 
-    await program.rpc.removeGif(numIndex, {
+    await program.rpc.removeGif(num, {
       accounts: {
         baseAccount: baseAccount.publicKey,
         user: provider.wallet.publicKey,
